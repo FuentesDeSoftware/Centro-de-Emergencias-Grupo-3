@@ -4,40 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto #3 - Centro de Emergencias</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: system-ui, sans-serif;
-      background: #f4f4f5;
-      color: #18181b;
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🚨%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
     }
-    main {
-      text-align: center;
-      padding: 16px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0 0 0.5rem;
-    }
-    p {
-      font-size: 1.25rem;
-      color: #52525b;
-    }
-  </style>
+  </script>
 </head>
 
 <body>
-  <main>
-    <h1>Proyecto #3</h1>
-    <p>Centro de Emergencias</p>
-    <p>Prueba de edicion: Marvin Jafeth</p>
-    <p>Prueba de edicion: Julio Fuentes</p>
-    <p>Prueba de edicion: Gerson Montes</p>
+  <!-- Proyecto #3 - Centro de Emergencias -->
+  <!-- Prueba de edicion: Marvin Jafeth -->
+  <!-- Prueba de edicion: Julio Fuentes -->
+  <!-- Prueba de edicion: Gerson Montes -->
+  <main id="app">
+    <section id="start-screen" class="start"></section>
+
+    <section id="game" class="game" hidden>
+      <header id="hud" class="topbar"></header>
+      <div class="layout">
+        <div class="stage">
+          <canvas id="scene"></canvas>
+          <div id="labels" class="labels"></div>
+          <div id="stage-hud" class="stage-hud"></div>
+          <div id="alerts" class="alerts"></div>
+        </div>
+        <aside class="side">
+          <section id="resource-panel" class="panel"></section>
+          <section id="house-info" class="panel"></section>
+          <button id="mobilize" class="btn-primary mobilize" type="button"></button>
+          <section id="radio-log" class="panel log"></section>
+        </aside>
+      </div>
+    </section>
+
+    <div id="result-modal" class="modal" hidden></div>
   </main>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
 <!-- Prueba de colaboracion realizada por Lisy -->
